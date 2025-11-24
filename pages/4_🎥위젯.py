@@ -52,7 +52,7 @@ if primary_button:
 
 
 '### :orange[다운로드 버튼: st.download_button()]'
-with open('data\mario.webp', "rb") as file:
+with open('data/mario.webp', "rb") as file:
     st.download_button(
         label = '이미지 파일 다운로드',   # 버튼 라벨
         data = file,                     # 다운로드할 파일 경로
