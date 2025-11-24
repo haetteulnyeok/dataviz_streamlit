@@ -5,17 +5,17 @@ st.title('이것은 나의 첫번째 Streamlit 웹 어플')
 
 import streamlit as st
 
-st.set_page_config(
-    page_title="김민성의 Streamlit",
-    page_icon="🔥",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get help': "https://docs.streamlit.io",
-        'Report a bug' : "https://streamlit.io",
-        'About' : "### 김민성 \n - [홍익대학교 산업데이터공학과]"
-    }
-)
+# st.set_page_config(
+#     page_title="김민성의 Streamlit",
+#     page_icon="🔥",
+#     layout="wide",
+#     initial_sidebar_state="expanded",
+#     menu_items={
+#         'Get help': "https://docs.streamlit.io",
+#         'Report a bug' : "https://streamlit.io",
+#         'About' : "### 김민성 \n - [홍익대학교 산업데이터공학과]"
+#     }
+# )
 
 st.title("🔥 김민성의 Streamlit 앱")
 st.write("여기부터 내용을 채워가면 돼!")
