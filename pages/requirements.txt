@@ -1,4 +1,0 @@
-matplotlib
-altair
-plotly
-seaborn
