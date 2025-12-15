@@ -43,7 +43,7 @@ import matplotlib.pyplot as plt
 from matplotlib import font_manager
 
 
-file_path = Path(__file__).resolve().parents[0] / "3차시험" / "kpopdemonhunters.csv"
+file_path = Path(__file__).resolve().parents[0] / "kpopdemonhunters.csv"
 
 
 df = load_data()
@@ -192,7 +192,7 @@ import pandas as pd
 import seaborn as sns
 
 
-df = pd.read_csv(file_path)
+df = pd.read_csv(file_path, encoding="utf=8")
 
 df.head()
 
@@ -243,7 +243,7 @@ st.pyplot(fig)
 #####################################################
 # Altair
 import altair as alt
-df = pd.read_csv("kpopdemonhunters.csv")
+df = pd.read_csv(file_path, encoding="utf=8")
 
 # 날짜 컬럼을 datetime 타입으로 변환
 df["pubDate"] = pd.to_datetime(df["pubDate"])
@@ -278,8 +278,7 @@ st.divider()
 #########################################################3
 # Plotly
 import plotly.express as px
-
-df = pd.read_csv("kpopdemonhunters.csv")
+df = pd.read_csv(file_path, encoding="utf=8")
 
 descriptions = df["description"].astype(str).tolist()
 
@@ -326,4 +325,5 @@ top_words = word_count.most_common(top_n)
 
 
 word_df = pd.DataFrame(top_words, columns=["keyword", "count"])
+
 
