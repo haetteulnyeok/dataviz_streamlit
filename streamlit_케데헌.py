@@ -1,6 +1,6 @@
 # 메인 페이지 설정
 import streamlit as st
-
+import pandas as pd
 # 타이틀 텍스트 출력
 st.title('C117023 김민성')
 st.header('K팝 데몬 헌터스 온라인 데이터 분석')
@@ -315,5 +315,6 @@ top_n = st.slider(
 )
 
 top_words = word_count.most_common(top_n)
+
 
 word_df = pd.DataFrame(top_words, columns=["keyword", "count"])
