@@ -1,6 +1,15 @@
 # 메인 페이지 설정
 import streamlit as st
 import pandas as pd
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent
+DATA_PATH = BASE_DIR / "kpopdemonhunters.csv"
+
+@st.cache_data
+def load_data():
+    return pd.read_csv(DATA_PATH)
+
 # 타이틀 텍스트 출력
 st.title('C117023 김민성')
 st.header('K팝 데몬 헌터스 온라인 데이터 분석')
@@ -34,9 +43,8 @@ import matplotlib.pyplot as plt
 from matplotlib import font_manager
 
 
-@st.cache_data
-def load_data():
-    return pd.read_csv("kpopdemonhunters.csv")
+file_path = Path(__file__).resolve().parents[0] / "3차시험" / "kpopdemonhunters.csv"
+
 
 df = load_data()
 st.dataframe(df.head())
@@ -184,7 +192,7 @@ import pandas as pd
 import seaborn as sns
 
 
-df = pd.read_csv("kpopdemonhunters.csv")
+df = pd.read_csv(file_path)
 
 df.head()
 
@@ -318,3 +326,4 @@ top_words = word_count.most_common(top_n)
 
 
 word_df = pd.DataFrame(top_words, columns=["keyword", "count"])
+
