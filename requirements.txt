@@ -1,4 +1,9 @@
 matplotlib
 altair
 plotly
+
 seaborn
+networkx
+wordcloud
+
+
